@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="img">
+    <file>img/target_FILL0.svg</file>
+    <file>img/add_circle.svg</file>
+    <file>img/delete_FILL0.svg</file>
+    <file>img/edit_FILL0.svg</file>
+    <file>img/MasonJar_SayItWithSimplicity.svg</file>
+    <file>img/png-jar-illustration.png</file>
+    <file>img/jar.png</file>
+  </qresource>
+</RCC>

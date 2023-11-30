@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>476</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Банка</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(0,0,0);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="banka" native="true">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>20</y>
+      <width>191</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <widget class="QProgressBar" name="progressBar">
+     <property name="geometry">
+      <rect>
+       <x>29</x>
+       <y>18</y>
+       <width>131</width>
+       <height>211</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.716, x2:1, y2:0.716, stop:0.0113636 rgba(255, 219, 219, 255), stop:0.386364 rgba(198, 148, 209, 255), stop:0.659091 rgba(224, 128, 182, 255), stop:1 rgba(104, 74, 132, 255));
+}
+QProgressBar {
+text-align: center;
+color: rgb(0, 0, 0);
+font: 900 14pt &quot;Arial Black&quot;;
+}
+</string>
+     </property>
+     <property name="value">
+      <number>100</number>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+     <property name="textVisible">
+      <bool>true</bool>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+    <widget class="QFrame" name="verticalFrame_2">
+     <property name="geometry">
+      <rect>
+       <x>-10</x>
+       <y>10</y>
+       <width>211</width>
+       <height>231</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:1 rgba(0, 0, 0, 0));
+image: url(:/img/img/plese.png);</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3"/>
+    </widget>
+   </widget>
+   <widget class="QTableView" name="tableView">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>360</y>
+      <width>420</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTableView {
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0.205, y2:0.198864, stop:0 rgba(104, 74, 132, 255), stop:1 rgba(221, 164, 233, 255)); 
+border: 1px solid rgba(255,255,255,40);
+border-bottom-right-radius: 7px; 
+border-bottom-left-radius: 7px; 
+color: black;
+font: 700 8pt &quot;Arial Black&quot;;
+}
+
+QHeaderView::section {
+background-color: rgb(104, 74, 132);
+color: white;
+border: none;
+height: 50px;
+font-size: 12pt;
+}
+
+QTableView::item {
+    border-style: none;
+    border-bottom: 1px solid rgba(255,255,255,50);
+
+}
+
+QTableView::item:selected{
+	border: none;
+	color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 50);
+}</string>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="textElideMode">
+     <enum>Qt::ElideMiddle</enum>
+    </property>
+    <property name="showGrid">
+     <bool>false</bool>
+    </property>
+    <property name="sortingEnabled">
+     <bool>true</bool>
+    </property>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>140</number>
+    </attribute>
+    <attribute name="verticalHeaderVisible">
+     <bool>false</bool>
+    </attribute>
+   </widget>
+   <widget class="QFrame" name="verticalFrame">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>290</y>
+      <width>161</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="spacing">
+      <number>5</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="addButton">
+       <property name="maximumSize">
+        <size>
+         <width>50</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial Black</family>
+         <pointsize>14</pointsize>
+         <italic>false</italic>
+         <fontweight>ExtraBold</fontweight>
+        </font>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0.198, y2:0.1875, stop:0 rgba(32, 72, 34, 255), stop:1 rgba(0, 170, 0, 255));
+border-radius: 7px;
+font: 800 14pt &quot;Arial Black&quot;;
+}
+QPushButton:hover {
+background-color: rgb(98, 190, 93);
+border-radius: 7px;
+font: 800 14pt &quot;Arial Black&quot;;
+}
+QPushButton:pressed {
+background-color: rgb(32, 72, 34);
+border-radius: 7px;
+font: 800 14pt &quot;Arial Black&quot;;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="res_rc.qrc">
+         <normaloff>:/img/img/add_circle.svg</normaloff>:/img/img/add_circle.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>25</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+       <property name="default">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="editButton">
+       <property name="maximumSize">
+        <size>
+         <width>50</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial Black</family>
+         <pointsize>14</pointsize>
+         <italic>false</italic>
+         <fontweight>ExtraBold</fontweight>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0.198, y2:0.1875, stop:0 rgba(51, 52, 115, 255), stop:1 rgba(0, 96, 217, 255));
+border-radius: 7px;
+font: 800 14pt &quot;Arial Black&quot;;
+}
+QPushButton:hover {
+background-color: rgb(144, 155, 255);
+border-radius: 7px;
+font: 800 14pt &quot;Arial Black&quot;;
+}
+QPushButton:pressed {
+background-color: rgb(0, 0, 161);
+border-radius: 7px;
+font: 800 14pt &quot;Arial Black&quot;;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="res_rc.qrc">
+         <normaloff>:/img/img/edit_FILL0.svg</normaloff>:/img/img/edit_FILL0.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>25</width>
+         <height>25</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="deleteButton">
+       <property name="maximumSize">
+        <size>
+         <width>50</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial Black</family>
+         <pointsize>14</pointsize>
+         <italic>false</italic>
+         <fontweight>ExtraBold</fontweight>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0.324227, y2:0.267, stop:0 rgba(106, 11, 62, 255), stop:1 rgba(191, 20, 108, 255));
+border-radius: 7px;
+font: 800 14pt &quot;Arial Black&quot;;
+}
+QPushButton:hover {
+background-color: rgb(217, 76, 149);
+border-radius: 7px;
+font: 800 14pt &quot;Arial Black&quot;;
+}
+QPushButton:pressed {
+background-color: rgb(106, 11, 62);
+border-radius: 7px;
+font: 800 14pt &quot;Arial Black&quot;;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="res_rc.qrc">
+         <normaloff>:/img/img/delete_FILL0.svg</normaloff>:/img/img/delete_FILL0.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>25</width>
+         <height>25</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="target">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>60</y>
+      <width>141</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(104, 74, 132);
+font: 20pt &quot;Swis721 BlkCn BT&quot;;
+color: rgb(255, 255, 255);
+border-radius: 7px;</string>
+    </property>
+    <property name="text">
+     <string>1000</string>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTarget">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>30</y>
+      <width>161</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>14</pointsize>
+      <italic>false</italic>
+      <fontweight>Black</fontweight>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255,200);
+font: 900 14pt &quot;Arial Black&quot;;
+border-radius:7px;</string>
+    </property>
+    <property name="text">
+     <string>Цель</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignHCenter|Qt::AlignTop</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelCurrent">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>170</y>
+      <width>161</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255,200);
+font: 900 14pt &quot;Arial Black&quot;;
+border-radius:7px;</string>
+    </property>
+    <property name="text">
+     <string>В банке</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignHCenter|Qt::AlignTop</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTarget_2">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>30</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Swis721 BlkCn BT</family>
+      <pointsize>16</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:1 rgba(0, 0, 0, 0));</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="res_rc.qrc">:/img/img/target_FILL0.svg</pixmap>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignHCenter|Qt::AlignTop</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="targetButton">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>120</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>50</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>10</pointsize>
+      <italic>false</italic>
+      <fontweight>ExtraBold</fontweight>
+     </font>
+    </property>
+    <property name="mouseTracking">
+     <bool>true</bool>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0.205, y2:0.198864, stop:0 rgba(104, 74, 132, 255), stop:1 rgba(221, 164, 233, 255));
+border-radius: 7px;
+font: 800 10pt &quot;Arial Black&quot;;
+}
+QPushButton:hover {
+background-color: rgb(216, 179, 229);
+border-radius: 7px;
+font: 800 10pt &quot;Arial Black&quot;;
+}
+QPushButton:pressed {
+background-color: rgb(104, 74, 132);
+border-radius: 7px;
+font: 800 10pt &quot;Arial Black&quot;;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Изменить цель</string>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="current">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>200</y>
+      <width>141</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(104, 74, 132);
+font: 20pt &quot;Swis721 BlkCn BT&quot;;
+color: rgb(255, 255, 255);
+border-radius: 7px;</string>
+    </property>
+    <property name="text">
+     <string>1000</string>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <zorder>labelCurrent</zorder>
+   <zorder>banka</zorder>
+   <zorder>tableView</zorder>
+   <zorder>verticalFrame</zorder>
+   <zorder>labelTarget</zorder>
+   <zorder>target</zorder>
+   <zorder>labelTarget_2</zorder>
+   <zorder>targetButton</zorder>
+   <zorder>current</zorder>
+  </widget>
+ </widget>
+ <resources>
+  <include location="res_rc.qrc"/>
+  <include location="res_rc.qrc"/>
+  <include location="res_rc.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -32,7 +32,7 @@ class Data:
         self.execute_query_with_params(sql_query, [date, balance])
 
     def update_investment_query(self, date, balance, id):
-        sql_query = "UPDATE investments SET Date=?, Category=?, Description=?, Balance=?, Status=? WHERE ID=?"
+        sql_query = "UPDATE investments SET Date=?, Balance=? WHERE ID=?"
         self.execute_query_with_params(sql_query, [date, balance, id])
 
     def delete_investment_query(self, id):

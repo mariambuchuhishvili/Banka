@@ -89,6 +89,7 @@ class InvestmentTracker(QMainWindow):
         self.ui.tableView.setModel(self.model)
 
     def reload_data(self):
+
         current = self.conn.total_balance()
         if current!='':
             self.ui.current.setText(current)
@@ -99,8 +100,19 @@ class InvestmentTracker(QMainWindow):
             self.ui.progressBar.setValue(int(current) * 100 / int(self.ui.target.text()))
 
     def change_target(self):
-        self.ui.target.setText(self.ui_target_window.inputTargetEdit.text())
+        newTarget = self.ui_target_window.inputTargetEdit.text()
+        self.conn.update_target_query(newTarget)
+        self.ui.target.setText(str(self.check_target()))
+        self.view_data()
+        self.reload_data()
         self.change_target_window.close()
+
+    def check_target(self):
+        target = self.conn.get_last_target_query()
+        if target != None:
+            return target
+        else:
+            return 1
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

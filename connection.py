@@ -16,6 +16,8 @@ class Data:
         query = QtSql.QSqlQuery()
         query.exec("CREATE TABLE IF NOT EXISTS investments (ID integer primary key AUTOINCREMENT, Date VARCHAR(20), "
                    "Balance integer)")
+        query.exec("CREATE TABLE IF NOT EXISTS targets (ID integer primary key AUTOINCREMENT, Target integer)")
+        query.exec("INSERT INTO targets (ID, Target) VALUES (1,1)")
         return True
 
     def execute_query_with_params(self, sql_query, query_values=None):
@@ -50,6 +52,14 @@ class Data:
         if query.next():
             return str(query.value(0))
         return '0'
-
+    def update_target_query(self, target):
+        sql_query = "UPDATE targets SET Target =? WHERE  ID=1"
+        self.execute_query_with_params(sql_query, [target])
+    def get_last_target_query(self):
+        sql_query = "SELECT Target FROM targets "
+        query = self.execute_query_with_params(sql_query)
+        if query.next():
+            return str(query.value(0))
+        return '0'
     def total_balance(self):
         return self.get_total(column="Balance")
